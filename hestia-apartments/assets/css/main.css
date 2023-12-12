@@ -81,7 +81,12 @@ header nav.icon-container {
 
 header nav#main-menu a:hover {
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 7px;
+}
+
+header nav#main-menu a[aria-current=page] {
+    text-decoration: underline;
+    text-underline-offset: 7px;
 }
 
 header nav#burger-menu {
@@ -101,9 +106,9 @@ header nav#burger-menu a {
     margin: 1rem
 }
 
-.active {
+header nav#burger-menu a[aria-current=page] {
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 7px;
 }
 
 .hidden {
