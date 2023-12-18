@@ -1,0 +1,324 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    /*font-family: Poppins; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+    /* --primaryColor: rgb(37, 53, 81); */
+    --primaryColor: hsl(194, 20%, 20%);
+    --primaryLightColor: hsl(194, 20%, 55%);
+    --primaryVeryLightColor: hsl(194, 20%, 90%);
+    --maxWidth: 1600px;
+    --headerHeight: 150px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primaryColor);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+img.featured-image {
+    width: 100%;
+
+}
+
+#wrapper {
+    width: 100%;
+    max-width: var(--maxWidth);
+    margin: auto;
+}
+
+/* header ------------------------------------- */
+header {
+    width: 100%;
+    max-width: var(--maxWidth);
+    margin: auto;
+    height: var(--headerHeight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+header div#logo {
+    height: 50%;
+}
+
+header div#logo img {
+    height: 100%;
+}
+
+header nav#main-menu a {
+    font-size: 18px;
+    color: white;
+    padding: 5px 15px;
+    transition: all 0.5s;
+}
+
+header nav.icon-container {
+    display: none;
+}
+
+header nav#main-menu a:hover {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+header nav#main-menu a[aria-current=page] {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+header nav#burger-menu {
+    position: absolute;
+    right: 0px;
+    top: var(--headerHeight);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: -3px 3px 3px lightgray;
+    width: 100%;
+    max-width: 320px;
+    z-index: 1000;
+}
+
+header nav#burger-menu a {
+    display: block;
+    color: var(--primaryColor);
+    margin: 1rem
+}
+
+header nav#burger-menu a[aria-current=page] {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.hidden {
+    display: none;
+}
+
+p.error {
+    color: red;
+    font-style: bold;
+    border: solid thin red;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+p.success {
+    color: green;
+    font-style: bold;
+    border: solid thin green;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}  
+/* header ------------------------------------- */
+
+div#athens-temp {
+    width: 100%;
+    text-align: right;
+    padding: 0.3rem 0;
+    color: var(--primaryColor);
+}
+div#athens-temp > span {
+    font-weight: bold;
+    color: var(--primaryColor);
+}
+
+/* footer ------------------------------------- */
+footer {
+    background-color: var(--primaryColor);
+    width: 100%;
+    padding: 115px 0;
+
+    > div#footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: var(--maxWidth);
+        margin: auto;
+        gap: 3%;
+
+        > div:nth-child(1) {
+            width: 25%;
+
+            > a {
+                display: block;
+                text-align: center;
+                margin-bottom: 1rem;
+
+                > img {
+                    width: 150px;
+                }
+            }
+
+            > p {
+                color: white;
+            }
+        }
+
+        > div:nth-child(2) {
+            width: 25%;
+        
+            > h2 {
+                color: white;
+            }
+        
+            > nav > a {
+                display: block;
+                color: white;
+                padding: 0.4rem 0;
+            }
+        
+            > nav > a:hover {
+                text-decoration: underline;
+            }
+        
+            > nav > h2 {
+                color: white;
+            }
+        }
+
+        > div:nth-child(3) {
+            width: 50%;
+        
+            > h2 {
+                color: #ffffff;
+            }
+        
+            > p {
+                color: #ffffff;
+            }
+        
+            > form {
+                width: 100%;
+                text-align: right;
+        
+                > input {
+                    margin-top: 1rem;
+                    padding: 1rem;
+                    font-size: 1.3rem;
+                }
+        
+                > input[type='email'] {
+                    color: var(--primaryColor);
+                    width: 100%;
+                }
+        
+                > input[type='submit'] {
+                    color: var(--primaryColor);
+                    width: 30%;
+                    min-width: 150px;
+                }
+        
+                > input[type='email']::placeholder {
+                    color: lightgray;
+                }
+            }
+        }
+    }
+}
+    
+/* footer ------------------------------------- */
+
+nav.icon-container {
+    --barColor: #ffffff;
+    --barWidth: 40px;
+    --barheight: 6px;
+    --barMarginVertical: 8px;
+    --transitionTime: 0.5s;
+    --rotationAngle: 135deg;
+    --translateY: calc((var(--barheight) + var(--barMarginVertical)));
+    display: inline-block;
+    cursor: pointer;
+
+    & > div {
+        width: var(--barWidth);
+        height: var(--barheight);
+        background-color: var(--barColor);
+        margin: var(--barMarginVertical) 0;
+        transition: var(--transitionTime);
+    }
+
+    &.change {
+        & > div:nth-child(1) {
+            transform: translateY(var(--translateY)) rotate(calc(-1 * var(--rotationAngle)));
+        }
+        & > div:nth-child(2) {
+            opacity: 0;
+        }
+        & > div:nth-child(3) {
+            transform: translateY(calc(var(--translateY) * -1)) rotate(var(--rotationAngle));
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    div#wrapper {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    div#footer-wrapper {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    footer > div#footer-wrapper {
+        flex-wrap: wrap;
+    }
+    footer > div#footer-wrapper > div:nth-child(1) {
+        width: 48%;
+    }
+    footer > div#footer-wrapper > div:nth-child(2) {
+        width: 48%;
+    }    
+    footer > div#footer-wrapper > div:nth-child(3) {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header nav#main-menu {
+        display: none;
+    }
+    header nav.icon-container {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    header nav#burger-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    footer > div#footer-wrapper > div:nth-child(1) {
+        width: 100%;
+    }
+    footer > div#footer-wrapper > div:nth-child(2) {
+        width: 100%;
+        margin-top: 2rem;
+    }    
+}
