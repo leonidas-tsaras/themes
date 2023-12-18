@@ -10,7 +10,8 @@
                 if(has_custom_logo()) {
                     echo '<img src="'. esc_url( $logo[0] ) .'">';
                 } else {
-                    echo '<h1>'. get_bloginfo('name') .'</h1>';
+                    $src = get_template_directory_uri().'/assets/images/logo.png';
+                    echo "<img src= $src alt = 'logo image'>";
                 }
             ?>  
             </a>

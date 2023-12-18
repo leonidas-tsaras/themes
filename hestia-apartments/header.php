@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <base href="http://localhost/hestia/"> -->
     <base href="<?php echo home_url( '/' ); ?>">
     
-
     <?php wp_head(); ?>
 </head>
 <body>
@@ -23,7 +21,8 @@
                     if(has_custom_logo()) {
                         echo '<img src = "' . esc_url($logo[0]) . '">';
                     } else {
-                        echo '<h2>'. get_bloginfo('name') .'</h2>';
+                    $src = get_template_directory_uri().'/assets/images/logo.png';
+                    echo "<img src= $src alt = 'logo image'>";
                     }
                 ?>
                 </a>
