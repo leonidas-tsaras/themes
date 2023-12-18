@@ -1,1 +1,0 @@
-<h2>black friday banner</h2>
