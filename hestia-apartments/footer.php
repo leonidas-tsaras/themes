@@ -9,7 +9,7 @@
                     if(has_custom_logo()) {
                         echo '<img src = "' . esc_url($logo[0]) . '">';
                     } else {
-                    $src = get_template_directory_uri().'/assets/images/logo.png';
+                    $src = get_template_directory_uri().'/assets/images/hestia-logo.svg';
                     echo "<img src= $src alt = 'logo image'>";
                     }
                 ?>
