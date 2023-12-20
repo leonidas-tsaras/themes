@@ -1,0 +1,155 @@
+
+
+
+main#home h1 {
+    font-size: 4rem;
+    color: white;
+    margin: 2rem 0;
+}
+main#home img#home-top {
+    width: 100%;
+}
+
+
+main#home section.image-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+}
+main#home section.image-text > div {
+    width: 47%;
+}
+main#home section.image-text > div:nth-child(1) > img {
+    width: 100%;
+}
+main#home section.image-text > div:nth-child(2) > h2 {
+    font-size: 3rem;
+    color: white;
+    margin: 1.5rem 0;
+}
+main#home section.image-text > div:nth-child(2) >  p {
+    font-size: 1.5rem;
+    color: white;
+    line-height: 2.7rem;
+    margin: 1.5rem 0;
+}
+
+
+main#home section.text-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+}
+main#home section.text-image > div {
+    width: 47%;
+}
+main#home section.text-image > div:nth-child(2) > img {
+    width: 100%;
+}
+main#home section.text-image > div:nth-child(1) > h2 {
+    font-size: 3rem;
+    color: white;
+    margin: 1.5rem 0;
+}
+main#home section.text-image > div:nth-child(1) >  p {
+    font-size: 1.5rem;
+    color: white;
+    line-height: 2.7rem;
+    margin: 1.5rem 0;
+}
+
+
+main#home section.text-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    gap: 6%;
+}
+main#home section.text-text > div {
+    width: 100%;
+}
+main#home section.text-text > div > h2 {
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+main#home section.text-text > div > p {
+    font-size: 1rem;
+    color: white;
+}
+
+
+main#home section.book-room {
+    text-align: center;
+    background-color: rgb(148, 145, 137);
+    padding: 5rem 0;
+    /* width: 100vw; */
+}
+main#home section.book-room > h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+main#home section.book-room > a {
+    background-color: white;
+    padding: 1rem 2rem;
+    color: rgb(148, 145, 137);
+    font-weight: bold;
+    transition: all 0.5s;
+}
+main#home section.book-room > a:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1100px) {
+    main#home {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+}
+
+@media (max-width: 700px) {
+    main#home section.image-text > div {
+        width: 100%;
+    }
+    
+    main#home section.text-image > div {
+        width: 100%;
+    }
+
+    main#home section.text-image {
+        flex-direction: column-reverse;
+    }
+
+    main#home section.text-text {
+        flex-wrap: wrap;
+    }
+
+    main#home h1 {
+        font-size: 3rem;
+    }
+}
+
+/* 
+480x320
+640x480
+640x360
+800x600
+960x640
+1024x768
+1280x720
+1280x768
+1280×800
+1280×1024
+1366×768
+1440×900
+1536×864
+1920×1080
+*/
+
